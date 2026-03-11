@@ -33,6 +33,7 @@ const plans = [
   {
     name: "Team",
     monthly: 79,
+    annualMonthly: 65,
     features: [
       "20 agents",
       "100 GB storage",
@@ -262,7 +263,7 @@ function Pricing() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
           {plans.map((plan) => {
             const price = annual
-              ? Math.round(plan.monthly * 0.8)
+              ? (plan.annualMonthly ?? Math.round(plan.monthly * 0.8))
               : plan.monthly;
 
             return (
