@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   title: "AtamaiAgents — Managed Cloud Hosting for AI Agents",
@@ -62,7 +63,10 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
       </head>
-      <body className="bg-background text-white antialiased">{children}</body>
+      <body className="bg-background text-white antialiased">
+        {children}
+        <CookieBanner />
+      </body>
     </html>
   );
 }
