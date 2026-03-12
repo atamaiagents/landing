@@ -361,6 +361,104 @@ function Features() {
   );
 }
 
+// Featured agent templates
+const featuredTemplates = [
+  {
+    slug: "invoice-manager",
+    icon: "💰",
+    name: "Invoice Manager",
+    description: "Automated invoice processing, tracking, and reminders",
+    category: "finance",
+  },
+  {
+    slug: "inbox-zero",
+    icon: "📧",
+    name: "Inbox Zero",
+    description: "Smart email triage, responses, and inbox management",
+    category: "productivity",
+  },
+  {
+    slug: "incident-responder",
+    icon: "🚨",
+    name: "Incident Responder",
+    description: "24/7 alert monitoring, triage, and escalation",
+    category: "devops",
+  },
+  {
+    slug: "social-media",
+    icon: "📱",
+    name: "Social Media Manager",
+    description: "Content scheduling, engagement, and analytics",
+    category: "marketing",
+  },
+  {
+    slug: "code-reviewer",
+    icon: "🔍",
+    name: "Code Reviewer",
+    description: "Automated PR reviews with context-aware feedback",
+    category: "development",
+  },
+  {
+    slug: "contract-reviewer",
+    icon: "⚖️",
+    name: "Contract Reviewer",
+    description: "AI-powered contract analysis and risk detection",
+    category: "legal",
+  },
+];
+
+function AgentTemplates() {
+  return (
+    <section className="section-pad">
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+            80+ Ready-to-Deploy Agents
+          </h2>
+          <p className="text-white/50 text-lg max-w-2xl mx-auto">
+            Pre-configured templates for every use case. Pick one, customize it, deploy in seconds.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {featuredTemplates.map((template) => (
+            <div
+              key={template.slug}
+              className="p-5 rounded-xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] hover:border-accent/20 transition-all group"
+            >
+              <div className="flex items-start gap-4">
+                <div className="text-3xl">{template.icon}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-accent-light transition-colors truncate">
+                      {template.name}
+                    </h3>
+                  </div>
+                  <p className="text-sm text-white/50 line-clamp-2 mb-2">
+                    {template.description}
+                  </p>
+                  <span className="inline-block px-2 py-0.5 rounded bg-white/5 text-xs text-white/40 capitalize">
+                    {template.category}
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <a
+            href="https://app.atamai.ai/dashboard/marketplace"
+            className="inline-flex items-center gap-2 text-accent hover:text-accent-light font-medium transition-colors text-lg"
+          >
+            Browse all 80+ templates →
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function SocialProof() {
   return (
     <section className="section-pad">
@@ -455,8 +553,9 @@ export default function Home() {
       <main>
         <Hero />
         <HowItWorks />
-        <Pricing />
         <Features />
+        <AgentTemplates />
+        <Pricing />
         <SocialProof />
       </main>
       <Footer />
