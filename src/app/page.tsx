@@ -10,10 +10,11 @@ const plans = [
     monthly: 19,
     annualMonthly: 15,
     features: [
+      "🤖 Free AI included (Gemini Flash)",
       "1 agent",
       "5 GB storage",
       "Community support",
-      "Bring Your Own Keys",
+      "Bring Your Own Keys (optional)",
       "All 80+ templates",
     ],
     cta: "Start Free Trial",
@@ -24,10 +25,11 @@ const plans = [
     monthly: 49,
     annualMonthly: 39,
     features: [
+      "🤖 Free AI included (Gemini Flash)",
       "5 agents",
       "25 GB storage",
       "Priority support",
-      "Bring Your Own Keys",
+      "Bring Your Own Keys (optional)",
       "All channels (Telegram, Slack, Discord, Web)",
       "Cron scheduling",
       "Inbound webhooks",
@@ -40,10 +42,11 @@ const plans = [
     monthly: 79,
     annualMonthly: 65,
     features: [
+      "🤖 Free AI included (Gemini Flash)",
       "20 agents",
       "100 GB storage",
       "Dedicated support",
-      "Bring Your Own Keys",
+      "Bring Your Own Keys (optional)",
       "All channels",
       "Cron scheduling",
       "Inbound webhooks",
@@ -56,6 +59,11 @@ const plans = [
 
 const features = [
   {
+    icon: "🤖",
+    title: "Free AI Included",
+    desc: "Start chatting instantly. No API key required. Powered by Gemini Flash. Bring your own key for Claude, GPT-4, or any provider.",
+  },
+  {
     icon: "⚡",
     title: "60-Second Deploy",
     desc: "From signup to live agent in under a minute. No config files, no infra knowledge required.",
@@ -63,7 +71,7 @@ const features = [
   {
     icon: "🔑",
     title: "Bring Your Own Keys",
-    desc: "Connect your Anthropic, OpenAI, or Google keys. We never store or share your API credentials.",
+    desc: "Connect your Anthropic, OpenAI, or Google keys. We never store or share your API credentials. Optional — free AI is included.",
   },
   {
     icon: "📱",
@@ -198,10 +206,17 @@ function Hero() {
             Live in 60 Seconds
           </span>
         </h1>
-        <p className="text-xl sm:text-2xl text-white/60 mb-10 max-w-2xl mx-auto leading-relaxed">
+
+        <p className="text-xl sm:text-2xl text-white/60 mb-6 max-w-2xl mx-auto leading-relaxed">
           Managed cloud hosting for open-source AI agents.
           <br className="hidden sm:block" /> No Docker, no VPS, no headaches.
         </p>
+
+        <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-400 text-sm px-4 py-2 rounded-full mb-8">
+          <span className="font-semibold">🤖 Free AI included</span>
+          <span className="text-green-300/70">— no API key needed to start</span>
+        </div>
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a
             href="https://app.atamai.ai"
