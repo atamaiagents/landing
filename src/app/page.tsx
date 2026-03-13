@@ -232,7 +232,7 @@ function Hero() {
           </a>
         </div>
         <p className="mt-6 text-sm text-white/30">
-          No credit card required · Cancel anytime · 7-day money-back guarantee
+          Cancel anytime · 7-day money-back guarantee
         </p>
       </div>
     </section>
