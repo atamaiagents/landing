@@ -49,7 +49,7 @@ const plans = [
     monthly: 19,
     annualMonthly: 15,
     features: [
-      "🤖 Free AI included (Gemini Flash)",
+      "🤖 200+ AI models (Gemini Flash)",
       "1 agent",
       "5 GB storage",
       "Community support",
@@ -64,7 +64,7 @@ const plans = [
     monthly: 49,
     annualMonthly: 39,
     features: [
-      "🤖 Free AI included (Gemini Flash)",
+      "🤖 200+ AI models (Gemini Flash)",
       "5 agents",
       "25 GB storage",
       "Priority support",
@@ -81,7 +81,7 @@ const plans = [
     monthly: 79,
     annualMonthly: 65,
     features: [
-      "🤖 Free AI included (Gemini Flash)",
+      "🤖 200+ AI models (Gemini Flash)",
       "20 agents",
       "100 GB storage",
       "Dedicated support",
@@ -99,7 +99,7 @@ const plans = [
 const features = [
   {
     icon: "🤖",
-    title: "Free AI Included",
+    title: "200+ AI models",
     desc: "Start chatting instantly. No API key required. Powered by Gemini Flash. Bring your own key for Claude, GPT-4, or any provider.",
   },
   {
