@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "AtamaiAgents",
     images: [
       {
-        url: "https://atamai.ai/api/og",
+        url: "https://app.atamai.ai/api/og",
         width: 1200,
         height: 630,
         alt: "AtamaiAgents — Managed AI Agent Hosting",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "AtamaiAgents — Your AI Agent, Live in 60 Seconds",
     description:
       "Managed cloud hosting for open-source AI agents. Starting at $19/mo.",
-    images: ["https://atamai.ai/api/og"],
+    images: ["https://app.atamai.ai/api/og"],
   },
   robots: {
     index: true,
