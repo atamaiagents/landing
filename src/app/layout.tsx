@@ -56,23 +56,14 @@ export default function RootLayout({
       <head>
         {/* TODO: Add analytics script here (Plausible / PostHog) */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        {/* Non-blocking Inter font load — preconnect first, then async CSS */}
+        {/* Preconnect to Google Fonts origins */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          rel="preload"
-          as="style"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        />
+        {/* Inter loaded with display=swap — font-display handled server-side by Google Fonts */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-          media="print"
-          onLoad="this.media='all'"
         />
-        <noscript>
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
-        </noscript>
       </head>
       <body className="bg-background text-white antialiased">
         {children}
