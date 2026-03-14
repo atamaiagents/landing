@@ -34,7 +34,7 @@ const plans = [
     features: [
       "⚡ 200+ AI models via OpenRouter",
       "1 agent",
-      "40,000 credits/month",
+      "40,000 credits/month (4M tokens)",
       "5 GB storage",
       "Community support",
       "Bring Your Own Keys (optional)",
@@ -50,7 +50,7 @@ const plans = [
     features: [
       "⚡ 200+ AI models via OpenRouter",
       "5 agents",
-      "80,000 credits/month",
+      "80,000 credits/month (8M tokens)",
       "25 GB storage",
       "Priority support",
       "Bring Your Own Keys (optional)",
@@ -68,7 +68,7 @@ const plans = [
     features: [
       "⚡ 200+ AI models via OpenRouter",
       "Unlimited agents",
-      "500,000 credits/month",
+      "500,000 credits/month (50M tokens)",
       "100 GB storage",
       "Dedicated support",
       "Bring Your Own Keys (optional)",
