@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "AtamaiAgents",
     images: [
       {
-        url: "https://atamai.ai/og-image.png", // placeholder — generate before launch
+        url: "https://atamai.ai/og-image.png",
         width: 1200,
         height: 630,
         alt: "AtamaiAgents — Managed AI Agent Hosting",
@@ -56,12 +56,23 @@ export default function RootLayout({
       <head>
         {/* TODO: Add analytics script here (Plausible / PostHog) */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        {/* Non-blocking Inter font load — preconnect first, then async CSS */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
         />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+          media="print"
+          onLoad="this.media='all'"
+        />
+        <noscript>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" />
+        </noscript>
       </head>
       <body className="bg-background text-white antialiased">
         {children}
