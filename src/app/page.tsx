@@ -110,7 +110,7 @@ const features = [
   {
     icon: "🔑",
     title: "Bring Your Own Keys",
-    desc: "Connect your Anthropic, OpenAI, or Google keys. We never store or share your API credentials. Optional — free AI is included.",
+    desc: "Connect your Anthropic, OpenAI, or Google keys. We never store or share your API credentials. Optional — platform AI is included.",
   },
   {
     icon: "📱",
