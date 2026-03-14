@@ -1,39 +1,20 @@
 "use client"
-import { useState, useCallback } from "react"
-import { Turnstile } from "@/components/Turnstile"
 
 function HeroCTA() {
-  const [verified, setVerified] = useState(false)
-
-  const handleVerify = useCallback((token: string) => {
-    // Fire-and-forget server verify; if it passes, allow redirect
-    fetch("/api/turnstile", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ token }),
-    }).then(r => { if (r.ok) setVerified(true) })
-  }, [])
-
   return (
-    <div className="flex flex-col items-center gap-4">
-      <div className="w-full max-w-xs">
-        <Turnstile onVerify={handleVerify} />
-      </div>
-      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a
-          href="https://app.atamai.ai"
-          onClick={!verified ? (e: React.MouseEvent) => e.preventDefault() : undefined}
-          className={`w-full sm:w-auto bg-accent text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all shadow-lg shadow-accent/30 ${verified ? "hover:bg-accent-hover hover:scale-105 cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
-        >
-          Deploy Now
-        </a>
-        <a
-          href="#how-it-works"
-          className="w-full sm:w-auto text-white/60 hover:text-white font-medium px-8 py-4 rounded-xl text-lg transition-colors border border-white/10 hover:border-white/20"
-        >
-          See how it works ↓
-        </a>
-      </div>
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+      <a
+        href="https://app.atamai.ai"
+        className="w-full sm:w-auto bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 shadow-lg shadow-accent/30"
+      >
+        Deploy Your Agent Now
+      </a>
+      <a
+        href="#how-it-works"
+        className="w-full sm:w-auto text-white/60 hover:text-white font-medium px-8 py-4 rounded-xl text-lg transition-colors border border-white/10 hover:border-white/20"
+      >
+        See how it works ↓
+      </a>
     </div>
   )
 }
@@ -623,7 +604,7 @@ function SocialProof() {
               href="https://app.atamai.ai"
               className="inline-block bg-accent hover:bg-accent-hover text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 shadow-lg shadow-accent/30"
             >
-              Join them — it&apos;s free to start
+              Deploy Your Agent Now
             </a>
           </div>
         </div>
