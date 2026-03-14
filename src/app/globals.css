@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* Inter loaded non-blocking via layout.tsx preload — font-display:swap handled by Google Fonts &display=swap param */
 
 :root {
   --background: #0a0a0a;
