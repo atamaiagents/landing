@@ -25,7 +25,7 @@ function HeroCTA() {
           onClick={!verified ? (e: React.MouseEvent) => e.preventDefault() : undefined}
           className={`w-full sm:w-auto bg-accent text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all shadow-lg shadow-accent/30 ${verified ? "hover:bg-accent-hover hover:scale-105 cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
         >
-          Start Free Trial
+          Deploy Now
         </a>
         <a
           href="#how-it-works"
@@ -56,7 +56,7 @@ const plans = [
       "Bring Your Own Keys (optional)",
       "All 80+ templates",
     ],
-    cta: "Start Free Trial",
+    cta: "Deploy Now",
     popular: false,
   },
   {
@@ -73,7 +73,7 @@ const plans = [
       "Cron scheduling",
       "Inbound webhooks",
     ],
-    cta: "Start Free Trial",
+    cta: "Deploy Now",
     popular: true,
   },
   {
@@ -91,7 +91,7 @@ const plans = [
       "Inbound webhooks",
       "Custom domain",
     ],
-    cta: "Start Free Trial",
+    cta: "Deploy Now",
     popular: false,
   },
 ];
@@ -221,7 +221,7 @@ function Navbar() {
           href="https://app.atamai.ai"
           className="bg-accent hover:bg-accent-hover text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors"
         >
-          Start Free Trial
+          Deploy Now
         </a>
       </div>
     </nav>
@@ -251,14 +251,14 @@ function Hero() {
           <br className="hidden sm:block" /> No Docker, no VPS, no headaches.
         </p>
 
-        <div className="inline-flex items-center gap-2 bg-green-500/10 border border-green-500/20 text-green-400 text-sm px-4 py-2 rounded-full mb-8">
-          <span className="font-semibold">🤖 Free AI included</span>
-          <span className="text-green-300/70">— no API key needed to start</span>
+        <div className="inline-flex items-center gap-2 bg-brand/10 border border-brand/20 text-brand-light text-sm px-4 py-2 rounded-full mb-8">
+          <span className="font-semibold">⚡ 200+ AI models</span>
+          <span className="text-brand-light/70">— OpenRouter built-in, BYOK optional</span>
         </div>
 
         <HeroCTA />
         <p className="mt-6 text-sm text-white/30">
-          Cancel anytime · 7-day money-back guarantee
+          7-day money-back guarantee · Cancel anytime
         </p>
       </div>
     </section>
