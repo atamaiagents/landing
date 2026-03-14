@@ -272,7 +272,7 @@ function SetupComparison() {
         <div className="text-center mb-12">
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Why most people never actually{" "}
-            <span className="text-red-400">use</span> OpenClaw
+            <span className="text-accent-light">use</span> OpenClaw
           </h2>
           <p className="text-white/50 text-lg">
             It is incredible software. Setup is not.
@@ -280,17 +280,17 @@ function SetupComparison() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 items-stretch">
-          {/* Without */}
-          <div className="rounded-2xl border border-red-500/20 bg-red-500/5 p-6 flex flex-col">
+          {/* Without — muted/dark */}
+          <div className="rounded-2xl border border-white/10 bg-white/3 p-6 flex flex-col">
             <div className="flex items-center gap-2 mb-5">
               <span className="flex gap-1.5">
-                <span className="w-3 h-3 rounded-full bg-red-500/60" />
-                <span className="w-3 h-3 rounded-full bg-yellow-500/40" />
-                <span className="w-3 h-3 rounded-full bg-green-500/30" />
+                <span className="w-3 h-3 rounded-full bg-white/20" />
+                <span className="w-3 h-3 rounded-full bg-white/15" />
+                <span className="w-3 h-3 rounded-full bg-white/10" />
               </span>
-              <span className="text-red-400/70 text-xs font-mono ml-1">Without AtamaiAgents</span>
+              <span className="text-white/30 text-xs font-mono ml-1">Without AtamaiAgents</span>
             </div>
-            <pre className="text-xs font-mono leading-relaxed text-white/50 flex-1 whitespace-pre-wrap overflow-auto">
+            <pre className="text-xs font-mono leading-relaxed text-white/40 flex-1 whitespace-pre-wrap overflow-auto">
 {`$ git clone openclaw && cd openclaw
 $ docker compose up
 ERROR: port 5432 already in use
@@ -309,7 +309,7 @@ Give up and use ChatGPT instead.`}
             </pre>
             <div className="mt-5 flex flex-col gap-2">
               {["Find a server", "Set up environment", "Debug Docker", "Configure channels", "Handle updates"].map((s) => (
-                <div key={s} className="flex items-center gap-2 text-sm text-red-400/60">
+                <div key={s} className="flex items-center gap-2 text-sm text-white/30">
                   <span>✗</span>
                   <span>{s}</span>
                 </div>
@@ -317,36 +317,36 @@ Give up and use ChatGPT instead.`}
             </div>
           </div>
 
-          {/* With */}
-          <div className="rounded-2xl border border-green-500/20 bg-green-500/5 p-6 flex flex-col">
+          {/* With — brand violet */}
+          <div className="rounded-2xl border border-accent/25 bg-accent/5 p-6 flex flex-col">
             <div className="flex items-center gap-2 mb-5">
               <span className="flex gap-1.5">
-                <span className="w-3 h-3 rounded-full bg-red-500/40" />
-                <span className="w-3 h-3 rounded-full bg-yellow-500/40" />
-                <span className="w-3 h-3 rounded-full bg-green-500/60" />
+                <span className="w-3 h-3 rounded-full bg-white/20" />
+                <span className="w-3 h-3 rounded-full bg-white/15" />
+                <span className="w-3 h-3 rounded-full bg-accent/60" />
               </span>
-              <span className="text-green-400/70 text-xs font-mono ml-1">With AtamaiAgents</span>
+              <span className="text-accent-light/70 text-xs font-mono ml-1">With AtamaiAgents</span>
             </div>
             <div className="flex-1 flex flex-col gap-4">
-              <div className="rounded-xl bg-white/5 border border-white/10 p-4">
+              <div className="rounded-xl bg-white/5 border border-accent/15 p-4">
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-green-400 text-sm font-medium">Agent is Running</span>
+                  <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+                  <span className="text-accent-light text-sm font-medium">Agent is Running</span>
                 </div>
-                <p className="text-white/60 text-xs font-mono">Uptime: 99.9% · Model: Claude Haiku · Channel: Telegram</p>
+                <p className="text-white/50 text-xs font-mono">Uptime: 99.9% · Model: Claude Haiku · Channel: Telegram</p>
               </div>
               <div className="rounded-xl bg-white/5 border border-white/10 p-4 text-sm text-white/60">
-                <span className="text-accent">You:</span> Draft a reply to the client email about the deadline
+                <span className="text-accent-light">You:</span> Draft a reply to the client email about the deadline
                 <br />
-                <span className="text-white/40 text-xs mt-2 block">Agent is typing...</span>
+                <span className="text-white/30 text-xs mt-2 block">Agent is typing...</span>
               </div>
               <div className="rounded-xl bg-accent/10 border border-accent/20 p-4 text-sm text-white/70">
                 <span className="text-accent-light">Agent:</span> Sure! Here is a professional reply acknowledging the timeline and proposing a revised milestone...
               </div>
             </div>
             <div className="mt-5 flex flex-col gap-2">
-              {["Sign up (GitHub OAuth)", "Pick a template", "Add your API key", "Agent is live"].map((s) => (
-                <div key={s} className="flex items-center gap-2 text-sm text-green-400/80">
+              {["Sign up (GitHub OAuth)", "Pick a template", "Pick your AI model", "Agent is live"].map((s) => (
+                <div key={s} className="flex items-center gap-2 text-sm text-accent-light/80">
                   <span>✓</span>
                   <span>{s}</span>
                 </div>
