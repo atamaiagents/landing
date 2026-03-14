@@ -21,8 +21,8 @@ function HeroCTA() {
       </div>
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <a
-          href={verified ? "https://app.atamai.ai" : undefined}
-          onClick={!verified ? (e) => e.preventDefault() : undefined}
+          href="https://app.atamai.ai"
+          onClick={!verified ? (e: React.MouseEvent) => e.preventDefault() : undefined}
           className={`w-full sm:w-auto bg-accent text-white font-semibold px-8 py-4 rounded-xl text-lg transition-all shadow-lg shadow-accent/30 ${verified ? "hover:bg-accent-hover hover:scale-105 cursor-pointer" : "opacity-50 cursor-not-allowed"}`}
         >
           Start Free Trial
@@ -40,7 +40,6 @@ function HeroCTA() {
 
 
 
-import { useState } from "react";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
